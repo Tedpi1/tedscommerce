@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+    <title>About Us</title>
+{% endblock title %}
+{% block content %}
+<section class="home">
+    <div class="nav-header">
+        <div class="nav-logo">
+            <h1>TedShop <span class="logo"></span></h1>
+        </div>
+        <nav class="links">
+            <li><a href="">Home</a></li>
+            <li><a href="">Shop</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact Us</a></li>
+        </ul>
+        <div class="security">
+            <i class="fa fas security"></i>
+        </div>
+    </div>
+</section>
+<section class="about">
+    <div class="about-container">
+        <div class="about-content">
+            <img src="{% static 'images/about.jpg' %}" alt="image1">
+            <h1>About Us</h1>
+        </div>
+        <div class="about-info">
+            <div class="about-history">
+                <div class="Our-history">
+                    <h1>Our Company</h1>
+                    <p>At TedShop, we believe in providing innovative solution that <br>
+                    enhance. Established in 2022 we have be delivery fashion with <br> aim
+                    of improving customer satisfaction
+                </p>
+                </div>
+                <div class="Our-history">
+                    <h1>Our Core Values</h1>
+                    <p>Integrity, Excellence and Customer focus. We are proud with our <br>
+                    commitment to providing quality products and services to our customers.
+                    </p>
+                </div>
+            </div>
+            <div class="about-detail">
+                <div class="Our-history">
+                    <h1>Our Vision</h1>
+                    <p>
+                        To be the leading fashion retailer in the region by providing <br>
+                        quality products and services that meet the needs of our customers.
+                </p>
+                </div>
+                <div class="Our-history">
+                    <h1>Our Mission</h1>
+                    <p>TedShop aims to become the leading fashion retailer in the region by <br>
+                    providing high-quality products and exceptional customer service.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="hero">
+            <h1>Testimonials</h1>
+            <div class="container">
+                <div class="indicator">
+                    <span class="Tbtn active"></span>
+                    <span class="Tbtn"></span>
+                    <span class="Tbtn"></span>
+                    <span class="Tbtn"></span>
+                </div>
+                <div class="testimonials">
+                    <div class="slide-row" id="slide1">
+                        <div class="slide-col">
+                            <div class="user-text">
+                                <h3>Veronicah W. Gichuhi</h3>
+                                <p class="job">Graphic Designer</p>
+                                <p>Veronicah Works as a Graphic Designer in VidCom Company and she has been <br>
+                                a loyal customer for a very longtime</p>
+                            </div>
+                            <div class="user-img">
+                                <img src="{% static 'images/1.jpg' %}" alt="image1">
+                            </div>
+                        </div>
+                        <div class="slide-col">
+                            <div class="user-text">
+                                <h3>Jonah Sitati</h3>
+                                <p class="job">Graphic Designer</p>
+                                <p>Jonah Works as a Graphic Designer in VidCom Company and he has been <br>
+                                a loyal customer for a very longtime</p>
+                            </div>
+                            <div class="user-img">
+                                <img src="{% static 'images/2.jpg' %}" alt="image1">
+                            </div>
+                        </div>
+                        <div class="slide-col">
+                            <div class="user-text">
+                                <h3>Anita M. Kanini</h3>
+                                <p class="job">Network Analyst</p>
+                                <p>Business relationship with Muli has been of 3 year and
+                                she has never shown any sence of unsatisfaction</p>
+                            </div>
+                            <div class="user-img">
+                                <img src="{% static 'images/3.jpg' %}" alt="image1">
+                            </div>
+                        </div>
+                        <div class="slide-col">
+                            <div class="user-text">
+                                <h3>Antoney O. Moro</h3>
+                                <p class="job">Web Developer</p>
+                                <p>Antoney has been our customer for over 5years and he has never been <br>
+                                dissappointed with our products</p>
+                            </div>
+                            <div class="user-img">
+                                <img src="{% static 'images/prof.jpg' %}" alt="image1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="{% static 'js/app.js' %}"></script>
+{% endblock content %}
