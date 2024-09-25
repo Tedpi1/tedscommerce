@@ -4,22 +4,6 @@
     <title>About Us</title>
 {% endblock title %}
 {% block content %}
-<section class="home">
-    <div class="nav-header">
-        <div class="nav-logo">
-            <h1>TedShop <span class="logo"></span></h1>
-        </div>
-        <nav class="links">
-            <li><a href="">Home</a></li>
-            <li><a href="">Shop</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact Us</a></li>
-        </ul>
-        <div class="security">
-            <i class="fa fas security"></i>
-        </div>
-    </div>
-</section>
 <section class="about">
     <div class="about-container">
         <div class="about-content">
@@ -58,66 +42,54 @@
                 </div>
             </div>
         </div>
-        <div class="hero">
-            <h1>Testimonials</h1>
-            <div class="container">
-                <div class="indicator">
-                    <span class="Tbtn active"></span>
-                    <span class="Tbtn"></span>
-                    <span class="Tbtn"></span>
-                    <span class="Tbtn"></span>
-                </div>
-                <div class="testimonials">
-                    <div class="slide-row" id="slide1">
-                        <div class="slide-col">
-                            <div class="user-text">
-                                <h3>Veronicah W. Gichuhi</h3>
-                                <p class="job">Graphic Designer</p>
-                                <p>Veronicah Works as a Graphic Designer in VidCom Company and she has been <br>
-                                a loyal customer for a very longtime</p>
-                            </div>
-                            <div class="user-img">
-                                <img src="{% static 'images/1.jpg' %}" alt="image1">
-                            </div>
-                        </div>
-                        <div class="slide-col">
-                            <div class="user-text">
-                                <h3>Jonah Sitati</h3>
-                                <p class="job">Graphic Designer</p>
-                                <p>Jonah Works as a Graphic Designer in VidCom Company and he has been <br>
-                                a loyal customer for a very longtime</p>
-                            </div>
-                            <div class="user-img">
-                                <img src="{% static 'images/2.jpg' %}" alt="image1">
-                            </div>
-                        </div>
-                        <div class="slide-col">
-                            <div class="user-text">
-                                <h3>Anita M. Kanini</h3>
-                                <p class="job">Network Analyst</p>
-                                <p>Business relationship with Muli has been of 3 year and
-                                she has never shown any sence of unsatisfaction</p>
-                            </div>
-                            <div class="user-img">
-                                <img src="{% static 'images/3.jpg' %}" alt="image1">
-                            </div>
-                        </div>
-                        <div class="slide-col">
-                            <div class="user-text">
-                                <h3>Antoney O. Moro</h3>
-                                <p class="job">Web Developer</p>
-                                <p>Antoney has been our customer for over 5years and he has never been <br>
-                                dissappointed with our products</p>
-                            </div>
-                            <div class="user-img">
-                                <img src="{% static 'images/prof.jpg' %}" alt="image1">
-                            </div>
-                        </div>
+        <div class="container">
+	
+            <div class="contents-wraper">
+                
+                <section class="header"><h1>Testimonial</h1></section>
+        
+                <section class="testRow">
+                    
+                    <div class="testItem active">
+                        <img src="{% static 'images/1.jpg' %}" alt="image1">
+                        <h3>Veronicah W. Gichuhi</h3>
+                        <h4>Nyandarua</h4>
+                        <p>"Outstanding service and top-quality products! TedShop has always exceeded our expectations, delivering exactly what we need, on time and within budget."</p>
                     </div>
-                </div>
+        
+                    <div class="testItem">
+                        <img src="{% static 'images/2.jpg' %}" alt="image1">
+                        <h3>Jonah Sitati</h3>
+                        <h4>Nairobi</h4>
+                        <p>"We’ve been working with TedShop for years, and their attention to detail and commitment to customer satisfaction is second to none. Highly recommended!"</p>
+                    </div>
+        
+                    <div class="testItem">
+                        <img src="{% static 'images/5.jpg' %}" alt="image1">
+                        <h3>Anita M. Kanini</h3>
+                        <h4>Makueni</h4>
+                        <p>"From start to finish, TedShop made our project a breeze. Their team is professional, knowledgeable, and truly cares about delivering the best results." </p>
+                    </div>
+        
+                    <div class="testItem">
+                        <img src="{% static 'images/prof.jpg' %}" alt="image1">
+                        <h3>Antoney O. Moro</h3>
+                        <h4>Kisumu</h4>
+                        <p>"Excellent experience! TedShop provides innovative solutions that have helped our business grow. We couldn't ask for a better partner."</p>
+                    </div>
+        
+                </section>
+        
+                <section class="indicators">
+                    <div class="dot active" attr='0' onclick="switchTest(this)"></div>
+                    <div class="dot" attr='1' onclick="switchTest(this)"></div>
+                    <div class="dot" attr='2' onclick="switchTest(this)"></div>
+                    <div class="dot" attr='3' onclick="switchTest(this)"></div>
+                </section>
+        
             </div>
         </div>
-    </div>
+        
 </section>
 <script src="{% static 'js/app.js' %}"></script>
 {% endblock content %}

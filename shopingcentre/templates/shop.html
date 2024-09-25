@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+<title>Shop</title>
+{% endblock title %}
+{% block content %}
+    <div class="shop">
+        <div class="about-content">
+            <img src="{% static 'images/darksho.jpg' %}" alt="image1">
+            <h2>Shop In Style with</h2>
+            <h1>TedShop</h1>
+        </div>
+        <div class="shop-container">
+            <div class="shop-type">
+                <div class="shop-categories">
+                    <h1>Categories</h1>
+                    <ul class="category">
+                        <li><a href="">All</a> </li>
+                        <li><a href="">Women</a> </li>
+                        <li><a href="">Children</a> </li>
+                        <li><a href="">Men</a> </li>
+                    </ul>
+                </div>
+                <div class="filter-bar">
+                    <h1>Price</h1>
+                    <div class="filter-content">
+                        <p>Price: <span id="demo"></span></p>
+                        <input type="range" min="0" max="2000" value="0" class="slider" id="myRange">
+                        <button class="btn btn-primary">Filter</button>
+                        <div class="range">Range $50-$200</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="shop-container-item">
+            <div class="shop-item">
+                
+                <div class="shop-content">
+                    <img src="{% static 'images/darksho.jpg' %}" alt="image1">
+                    <a href="">Add to cart</a>
+                    <h1>Dark Shoe</h1>
+                    <p class="price">$20</p>
+                </div>
+                <div class="shop-content">
+                    <img src="{% static 'images/sell8.jpg' %}" alt="image1">
+                    <a href="">Add to cart</a>
+                    <h1>Dark Shoe</h1>
+                    <p class="price">$20</p>
+                </div>
+                <div class="shop-content">
+                    <img src="{% static 'images/sell7.jpg' %}" alt="image1">
+                    <a href="">Add to cart</a>
+                    <h1>Dark Shoe</h1>
+                    <p class="price">$20</p>
+                </div>
+                <div class="shop-content">
+                    <img src="{% static 'images/sell5.jpg' %}" alt="image1">
+                    <a href="">Add to cart</a>
+                    <h1>Dark Shoe</h1>
+                    <p class="price">$20</p>
+                </div>
+                <div class="shop-content">
+                    <img src="{% static 'images/sell4.jpg' %}" alt="image1">
+                    <a href="">Add to cart</a>
+                    <h1>Dark Shoe</h1>
+                    <p class="price">$20</p>
+                </div>
+                <div class="shop-content">
+                    <img src="{% static 'images/darksho.jpg' %}" alt="image1">
+                    <a href="">Add to cart</a>
+                    <h1>Dark Shoe</h1>
+                    <p class="price">$20</p>
+                </div>
+                <div class="shop-content">
+                    <img src="{% static 'images/sell3.jpg' %}" alt="image1">
+                    <a href="">Add to cart</a>
+                    <h1>Dark Shoe</h1>
+                    <p class="price">$20</p>
+                </div>
+                <div class="shop-content">
+                    <img src="{% static 'images/sell2.jpg' %}" alt="image1">
+                    <a href="">Add to cart</a>
+                    <h1>Dark Shoe</h1>
+                    <p class="price">$20</p>
+                </div>
+                <div class="shop-content">
+                    <img src="{% static 'images/sell1.jpg' %}" alt="image1">
+                    <a href="">Add to cart</a>
+                    <h1>Dark Shoe</h1>
+                    <p class="price">$20</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

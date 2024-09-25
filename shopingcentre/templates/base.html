@@ -5,7 +5,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     {% block title %}
     <title>ted's go Shoping</title>
     {% endblock title %}
@@ -15,8 +14,22 @@
     
 </head>
 <body>
+    <div class="nav-header">
+        <div class="nav-logo">
+            <h1>TedShop <span class="logo"></span></h1>
+        </div>
+        <nav class="links">
+            <li><a href="">Home</a></li>
+            <li><a href="">Shop</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact Us</a></li>
+        </ul>
+        <div class="security">
+            <i class="fa fas security"></i>
+        </div>
+    </div>
     {% block content %}
-    
     {% endblock content %}
+
 </body>
 </html>
