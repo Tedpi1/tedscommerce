@@ -9,11 +9,11 @@
         <form method="POST" action="">
             
             {% csrf_token %}
-            {{ form.as_p }}
+            {% comment %} cross site request forgery protection {% endcomment %}
             <section class="form-container">
                 <div class="form-group">
                     <h1 class="text">Please Login</h1>
-                    <input type="email" class="form-control" id="email" placeholder="email"required>
+                    <input type="username" class="form-control" id="username" name="username" placeholder="Username" required>
                     <input type="password" class="form-control" id="password1" name="password" placeholder="Confirm Password" required>
                 </div>
                 <div class="access">

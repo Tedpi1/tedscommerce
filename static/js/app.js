@@ -109,3 +109,52 @@ function pause(){
 
 // Resume sliding when mouse is out of the indicators
 container.addEventListener('mouseout', autoSliding);
+//adding placeholder to input field
+var form_fields= document.getElementsByTagName('input');
+form_fields[0].placeholder="first_sname";
+form_fields[1].placeholder="last_name";
+form_fields[2].placeholder="username";
+form_fields[3].placeholder="email";
+form_fields[4].placeholder="password"
+form_fields[5].placeholder="confirm password"
+
+for(var fields in form_fields){
+    form_fields[fields].className+=" form-control"
+}
+
+// product
+const image = document.getElementById( 'productImg' );
+const btn = document.getElementsByClassName( 'btn' );
+
+btn[0].addEventListener( 'click', function(){
+    image.src = './img/1.png';
+    for( bt of btn ){
+        bt.classList.remove( 'active' );
+    }
+    this.classList.add( 'active' );
+} );
+btn[1].addEventListener( 'click', function(){
+    image.src = './img/2.png';
+    for( bt of btn ){
+        bt.classList.remove( 'active' );
+    }
+    this.classList.add( 'active' );
+} );
+btn[2].addEventListener( 'click', function(){
+    image.src = './img/3.png';
+    for( bt of btn ){
+        bt.classList.remove( 'active' );
+    }
+    this.classList.add( 'active' );
+} );
+
+//product image
+let bigImg =document.querySelector('.big-image img')
+function showImg(pic){
+    bigImg.src=pic
+}
+bigImg.addEventListener('click',function(){
+    bigImg.src="{%static 'images/shoes.jpg'%}"
+})
+
+//add product to cart

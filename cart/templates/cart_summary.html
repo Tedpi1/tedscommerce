@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    <title>Cart</title>    
+{% endblock title %}
+{% block content %}
+    {% comment %} <div class="cart-container">
+        <div class="cart-content">
+            <div class="cart-item">
+                <img src="{% static 'images/1.jpg' %}" alt="" class="cart-img">
+                <div class="cart-text">
+                    <h1>T-shirt</h1>
+                    <p class="price">$20</p>
+                    <div class="quantity">
+                        <p>Quantity</p>
+                        <input type="number" value="1" >
+                    </div>
+                    <a href="">Delete</a>
+                </div>
+            </div>
+        </div>
+        <div class="checkout-container">
+            <div class="subtotal">
+                <p class="check">Subtotal</p>
+                <p >$40</p>
+            </div>
+            <div class="shipping">
+                <p class="check">Shipping</p>
+                <p>$5</p>
+            </div>
+            <div class="total">
+                <p class="check">Total</p>
+                <p>$45</p>
+        </div>
+    </div> {% endcomment %}
+{% endblock content %}
