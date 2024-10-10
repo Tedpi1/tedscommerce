@@ -21,15 +21,7 @@
                         <li><a href="{% url "shopingcentre:category" 'Children' %}">Children</a> </li>
                     </ul>
                 </div>
-                <div class="filter-bar">
-                    <h1>Price</h1>
-                    <div class="filter-content">
-                        <p>Price: <span id="demo"></span></p>
-                        <input type="range" min="0" max="2000" value="0" class="slider" id="myRange">
-                        <button class="btn btn-primary">Filter</button>
-                        <div class="range">Range $50-$200</div>
-                    </div>
-                </div>
+                
             </div>
         </div>
         <div class="shop-container-item">
@@ -41,7 +33,6 @@
                     <img src="{{product.image.url}}" alt="image1">
                     <h1>{{product.name}}</h1>
                     <p class="price"><strike>${{product.price}}</strike>&nbsp;${{product.sale_price}}</p>
-                    
                 </div>
                 {% else %}
                 <div class="shop-content">
@@ -53,7 +44,7 @@
                 {% endif %}
                 <div class="view">
                     <div class="cartLink">
-                        <a href="{% url 'cart_add' product_id=product.id %}" class="btn btn-primary" role="button" aria-pressed="true" data-toggle="modal" data-target="#exampleModal"value="{{product.id}}" id="addCart">Add Cart</a>
+                        <a href="{% url 'add_cart' product_id=product.id %}" class="addCart" role="button" aria-pressed="true" data-toggle="modal" data-target="#exampleModal"value="{{product.id}}" id="addCart">Add Cart</a>
                     </div>
                     <div class="viewLink">
                         <a href=" {% url 'shopingcentre:product' pk=product.id %}">View Product</a>
@@ -63,24 +54,5 @@
             </div>
         </div>
     </div>
-    <script>
-        $(document).on('click','#addCart',function(e){
-            e.preventDefault();
-            $.ajax({
-                type:'POST',
-                url: cart_add/,
-                data:{
-                    product_id:$('#addCart').val(),
-                    csrfmiddlewaretoken: '{{ csrf_token }}',
-                    action: 'post'
-                },
-                success: function(json){
-                    console.log(json)
-                },
-                error: function(xhr,errmsg,err){
-                }
-            });
-        });
-    </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 {% endblock content %}
