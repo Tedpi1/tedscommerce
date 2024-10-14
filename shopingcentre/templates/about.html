@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+    <title>About Us</title>
+{% endblock title %}
+{% block content %}
+<section class="about">
+    <div class="about-container">
+        <div class="about-content">
+            <img src="{% static 'images/about.jpg' %}" alt="image1">
+            <h1>About Us</h1>
+        </div>
+        <div class="about-info">
+            <div class="about-history">
+                <div class="Our-history">
+                    <h1>Our Company</h1>
+                    <p>At TedShop, we believe in providing innovative solution that <br>
+                    enhance. Established in 2022 we have be delivery fashion with <br> aim
+                    of improving customer satisfaction
+                </p>
+                </div>
+                <div class="Our-history">
+                    <h1>Our Core Values</h1>
+                    <p>Integrity, Excellence and Customer focus. We are proud with our <br>
+                    commitment to providing quality products and services to our customers.
+                    </p>
+                </div>
+            </div>
+            <div class="about-detail">
+                <div class="Our-history">
+                    <h1>Our Vision</h1>
+                    <p>
+                        To be the leading fashion retailer in the region by providing <br>
+                        quality products and services that meet the needs of our customers.
+                </p>
+                </div>
+                <div class="Our-history">
+                    <h1>Our Mission</h1>
+                    <p>TedShop aims to become the leading fashion retailer in the region by <br>
+                    providing high-quality products and exceptional customer service.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+	
+            <div class="contents-wraper">
+                
+                <section class="header"><h1>Testimonials</h1></section>
+        
+                <section class="testRow">
+                    
+                    <div class="testItem active">
+                        <img src="{% static 'images/1.jpg' %}" alt="image1">
+                        <h3>Veronicah W. Gichuhi</h3>
+                        <h4>Nyandarua</h4>
+                        <p>"Outstanding service and top-quality products! TedShop has always exceeded our expectations, delivering exactly what we need, on time and within budget."</p>
+                    </div>
+        
+                    <div class="testItem">
+                        <img src="{% static 'images/2.jpg' %}" alt="image1">
+                        <h3>Jonah Sitati</h3>
+                        <h4>Nairobi</h4>
+                        <p>"We’ve been working with TedShop for years, and their attention to detail and commitment to customer satisfaction is second to none. Highly recommended!"</p>
+                    </div>
+        
+                    <div class="testItem">
+                        <img src="{% static 'images/5.jpg' %}" alt="image1">
+                        <h3>Anita M. Kanini</h3>
+                        <h4>Makueni</h4>
+                        <p>"From start to finish, TedShop made our project a breeze. Their team is professional, knowledgeable, and truly cares about delivering the best results." </p>
+                    </div>
+        
+                    <div class="testItem">
+                        <img src="{% static 'images/prof.jpg' %}" alt="image1">
+                        <h3>Antoney O. Moro</h3>
+                        <h4>Kisumu</h4>
+                        <p>"Excellent experience! TedShop provides innovative solutions that have helped our business grow. We couldn't ask for a better partner."</p>
+                    </div>
+        
+                </section>
+        
+                <section class="indicators">
+                    <div class="dot active" attr='0' onclick="switchTest(this)"></div>
+                    <div class="dot" attr='1' onclick="switchTest(this)"></div>
+                    <div class="dot" attr='2' onclick="switchTest(this)"></div>
+                    <div class="dot" attr='3' onclick="switchTest(this)"></div>
+                </section>
+        
+            </div>
+        </div>
+        
+</section>
+<script src="{% static 'js/app.js' %}"></script>
+{% endblock content %}

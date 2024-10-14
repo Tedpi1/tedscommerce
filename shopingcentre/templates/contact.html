@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+    <title>Contact Us</title>
+{% endblock title %}
+{% block content %}
+<section class="contact">
+    <div class="about-content">
+        <img src="{% static 'images/blouse.jpg' %}" alt="image1">
+        <h1>Contact Us</h1>
+    </div>
+    <div class="contact-info">
+        <div class="contact-map">
+            <a href="https://maps.app.goo.gl/owxtjt84sxfvwGn19">
+                <img src="{% static 'images/map.jpg' %}" alt="image1">
+            </a>
+        </div>
+        <div class="contact-form">
+            <div class="contact-header">
+                <h1>Contact form</h1>
+                <h2>Get In Touch</h2>
+            </div>
+            <form action="https://api.web3forms.com/submit" class="form" method="POST">
+                <input type="hidden" name="access_key" value="b083dee3-fd02-4924-b28e-849adee02622">
+                <input type="text" name="name" placeholder="Your Name" id="name">
+                <input type="email" name="email" placeholder="Your Email" id="email">
+                <input type="text" name="subject" placeholder="Subject" id="subject">
+                <textarea name="message" id="" cols="30" rows="10" placeholder="Message"  id="message"></textarea>
+                <input type="submit"  class="submit">
+            </form>
+            <div class="socialIcon">
+                <a href="https://wa.me/254757386918" class="whatsapp-link" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</section>
+<script src="{% static 'js/app.js' %}"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+{% endblock content %}
