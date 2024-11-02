@@ -5,32 +5,51 @@
 {% endblock title %}
 
 {% block content %}
-<div class="create-cont">
-    <div class="container">
-        <div class="row">
-            <form method="POST" action="">
+<div class="form-cont">
+    <div class="contain">
+
+        <div class="form-box login">
+            <form action="" method="POST">
                 {% csrf_token %}
-                <section class="form-container">
-                    <div class="form-group">
-                        <h1 class="text">Fill the Form Below to Update Your Credentials</h1>
-                        {% if form.errors%}
-                            <p class="color" style="color: white; background-color: red; width: 270px; padding: 20px;">Please Check Your Entries and try again</p>
-                        {% endif %}
-                                {{user_form.username}}
-                                {{user_form.first_name}}
-                                {{user_form.last_name}}
-                                {{user_form.email}}
-                                {{user_form.password1}}
-                                {{user_form.password2}}
-                        <div class="account-auth">
-                            <button type="submit" class="btn">Update User</button>
-                            <a class="login-link" href="{% url "shopingcentre:update_password" %}">Change Passowrd</a>
-                        </div>
-                    </div>
-                </section>
-                
+                <h1>Update User Details</h1>
+                <div class="input-box">
+                    {{user_form.username}}
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box">
+                    {{user_form.first_name}}
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box">
+                    {{user_form.last_name}}
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box">
+                    {{user_form.email}}
+                    <i class='bx bx-envelope' ></i>
+                </div>
+                <!-- <div class="forgot-password">
+                    <a href="#">Forgot Password?</a>
+                </div> -->
+                <button type="submit" class="btn">Update User</button>
+                <p>or signup with social account</p>
+                <div class="social-icons">
+                    <a href=""><i class='bx bxl-google' ></i></a>
+                    <a href=""><i class='bx bxl-facebook' ></i></a>
+                    <a href=""><i class='bx bxl-twitter' ></i></a>
+                </div>
             </form>
+        </div>
+
+        <div class="toggle-box">
+            <div class="toggle-panel toggle-left">
+                <h1>Update Your Profile</h1>
+                <p></p>
+                <a href="{% url 'shopingcentre:update_profile' %}"><button class="btn register-btn">Update Profile</button></a>
+            </div>
+            
         </div>
     </div>
 </div>
+<script src="{% static 'js/app.js' %}"></script>
 {% endblock content %}

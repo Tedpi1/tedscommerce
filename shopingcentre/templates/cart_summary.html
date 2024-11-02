@@ -19,7 +19,7 @@
                 <img src="{{cart_item.product.image.url}}" alt="image1" class="carImg">
                 <div class="cart-text">
                     <h1>{{cart_item.product.name}}</h1>
-                    <p class="price">{{cart_item.product.price}}</p>
+                    <p class="price">Kshs {{cart_item.product.price}}</p>
                     <p class="total-price">Total cost: Kshs {{cart_item.subtotal}}</p>
                     <div class="quantity">
                         <p>Quantity</p>
@@ -42,7 +42,7 @@
             <div class="check-content">
                 <div class="subtotal">
                     <p class="check">Subtotal</p>
-                    <p >${{total}}</p>
+                    <p >Kshs {{total}}</p>
                 </div>
                 <div class="shipping">
                     <p class="check">Tax</p>

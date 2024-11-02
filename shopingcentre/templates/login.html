@@ -4,24 +4,41 @@
 <title> Login</title>
 {% endblock title %}
 {% block content %}
-<div class="container">
-    <div class="row">
-        <form method="POST" action="">
+<div class="form-cont">
+    <div class="contain">
+        <div class="form-box login">
             
-            {% csrf_token %}
-            {% comment %} cross site request forgery protection {% endcomment %}
-            <section class="form-container">
-                <div class="form-group">
-                    <h1 class="text">Please Login</h1>
-                    <input type="username" class="form-control" id="username" name="username" placeholder="Username" required>
-                    <input type="password" class="form-control" id="password1" name="password" placeholder="Confirm Password" required>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <h1>Login</h1>
+                <div class="input-box">
+                    <input type="text" name="username" placeholder="Username" required>
+                    <i class='bx bxs-user' ></i>
                 </div>
-                <div class="access">
-                    <button type="submit" class="btn btn-primary">Login</button>
-                    <p class="text">Don't have an account? <a href=" {% url 'shopingcentre:signup' %}">Register</a></p>
+                <div class="input-box">
+                    <input type="password" name="password" placeholder="Password" required>
+                    <i class='bx bxs-lock-alt' ></i>
                 </div>
-            </section>
-        </form>
+                <div class="forgot-password">
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <p>or login with social account</p>
+                <div class="social-icons">
+                    <a href=""><i class='bx bxl-google' ></i></a>
+                    <a href=""><i class='bx bxl-facebook' ></i></a>
+                    <a href=""><i class='bx bxl-twitter' ></i></a>
+                </div>
+            </form>
+        </div>
+        <div class="toggle-box">
+            <div class="toggle-panel toggle-left">
+                <h1>Hello, Welcome</h1>
+                <p>Don't have a account ?</p>
+                <a href="{% url 'shopingcentre:signup' %}"><button class="btn register-btn">Sign-Up</button></a>
+            </div>            
+        </div>
     </div>
 </div>
+<script src="{% static 'js/app.js' %}"></script>
 {% endblock content %}

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sevillana&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
 :root{
     --bg-black-900:#f2f2fc;
     --bg-black-100:#fdf9ff;
@@ -61,10 +62,246 @@ body{
 .hidden{
     display: none !important;
 }
-.container{
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+.form-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #e2e2e2, #c9d6ff);
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif
+}
+.form-cont .contain{
+    position: relative;
+    width: 850px;
+    height: 550px;
+    background: #fff;
+    box-shadow: var(--dark-shadow);
+    overflow: hidden;
+    margin: 20px;
+}
+.form-cont .contain .form-box{
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    color: #333;
+    text-align: center;
+    padding: 40px;
+    z-index: 1;
+    transition: .6s ease-in-out 1.2s, visibility 0 1.2s;
+}
+.contain.active .form-box{
+    right: 50%;
+}
+.form-cont .contain .form-box.register{
+    visibility: hidden;
+}
+.contain.active .form-box.register{
+    visibility: visible;
+}
+.form-cont .contain .form-box form{
+    width: 100%;
+    
+}
+.form-cont .contain h1{
+    font-size: 36px;
+    margin: -10px 0;
+    
+}
+.form-cont .contain .input-box{
+    position: relative;
+    margin:5px 0;
+}
+.form-cont .contain .input-box input{
+    width: 100%;
+    padding: 10px 0;
+    background: #eee;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+}
+.form-cont .contain .input-box input::placeholder{
+    color: #888;
+    font-weight: 400;
+}
+.form-cont .contain .input-box i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #888;
+}
+.form-cont .contain .forgot-password{
+    margin: 10px 0 15px;
+}
+.form-cont .contain .forgot-password a{
+    font-size: 14.5px;
+    color: #888;
+    text-decoration: none;
+}
+
+.form-cont .contain .btn{
+    width: 100%;
+    height: 48px;
+    background:var(--main--color);
+    color: white;
+    box-shadow: var(--light-shadow);
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 8px;
+    font-weight: 400;
+}
+.form-cont .contain p{
+    font-size: 14.5px;
+    margin: 15px 0;
+}
+.form-cont .social-icons{
+    display: flex;
+    justify-content: center;
+}
+.form-cont .social-icons a{
+    display: inline-flex;
+    padding: 10px;
+    border: 2px solid var(--bg-black-900);
+    border-radius: 8px;
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 0 8px;
+}
+.form-cont .toggle-box{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.form-cont .toggle-box::before{
+    content: '';
+    position: absolute;
+    left: -250%;
+    width: 300%;
+    height: 100%;
+    border-radius: 150px;
+    background: var(--main--color);
+    z-index: 2;
+    transition: 1.8s ease-in-out;
+}
+.form-cont .contain.active .toggle-box::before{
+    left: 50%;
+
+}
+.form-cont .toggle-box .toggle-panel{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    /* background: var(--main--color); */
+    display: flex;
+    color: #fff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    transition: .6s ease-in-out;
+}
+.form-cont .toggle-box .toggle-panel.toggle-right{
+    right: -50%;
+    transition-delay: .6s;
+}
+.form-cont .toggle-box .toggle-panel.toggle-left{
+    left: 0;
+}
+.form-cont .contain.active .toggle-panel.toggle-left{
+    left: -50%;
+    transition-delay: .6s;
+}
+.form-cont .contain.active .toggle-panel.toggle-right{
+    right: 0;
+    transition-delay: 1.2s;
+
+}
+.form-cont .toggle-box .toggle-panel p{
+    margin-bottom: 20px;
+}
+.form-cont .toggle-box .toggle-panel .btn{
+    width: 160px;
+    height: 48px;
+    background: transparent;
+    border: 2px solid #fff;
+}
+@media screen and (max-width: 768px) {
+    .form-cont .contain{
+        height: calc(100vh - 20px);
+    }
+    .form-cont .contain .form-box{
+        width: 100%;
+        height: 70%;
+        bottom: 0;
+    }
+    .contain.active .form-box{
+        right: 0;
+        bottom: 30%;
+    }
+    .form-cont .contain.active .toggle-box::before{
+        left: 0;
+        top: 70%;
+    }
+    .form-cont .toggle-box::before{
+        width: 100%;
+        height: 300%;
+        left: 0;
+        top: -270%;
+        border-radius: 20vw;
+    }
+    .form-cont .toggle-box .toggle-panel{
+        width: 100%;
+        height: 30%;
+    }
+    .form-cont .contain.active .toggle-panel.toggle-left{
+        left: 0;
+        top: -30%;
+    }
+    .form-cont .toggle-panel.toggle-left{
+        top: 0;
+    }
+    .form-cont .toggle-panel.toggle-right{
+        right: 0;
+        bottom: -30%;
+    }
+    .form-cont .contain.active .toggle-panel.toggle-right{
+        bottom: 0;
+    }
+}
+@media screen and (max-width: 400px){
+    .form-cont .contain .form-box{
+        padding: 20px;
+    }
+    .form-cont .contain .toggle-box .toggle-panel h1{
+        font-size: 30px;
+    }
+}
+
+/* .container{
     position: relative;
     width: 100%;
-    max-width: var(--max-width);
+    
     
     margin: 0 auto;
     margin-top: 20rem;
@@ -192,15 +429,14 @@ body{
 .container .row .form-container .access .text{
     margin-left: 26rem;
     margin-top: -1rem;
-}
+} */
 /* navigation bar */
 .nav-header{
     display: flex;
     flex-direction: row;
     height: 5rem;
     position: fixed;
-    width: 1583px;
-    flex-wrap: wrap;
+    width: 1580px;
     z-index: 999;
     box-shadow: var(--dark-shadow);
     background-color: #5f5e5e;
@@ -229,15 +465,10 @@ li{
     margin-top: 2rem;
     position: relative;
     margin-left: 25rem;
-    
-}
-.nav-header .links{
-    display: flex;
     gap: 5rem;
+    display: flex;
 }
-.nav-header .links .link{
-    margin-left: 4rem;
-}
+
 .nav-header .links a{
     color: black;
     font-size: 2rem;
@@ -257,54 +488,59 @@ li{
 .nav-header .links a:hover{
     color: #4CAF50;
 }
-.nav-header .authentication {
-    position: absolute;
+.nav-header .icons-content{
+    position: relative;
+    left: 10rem;
+    display: flex;
     top: 2rem;
-    left: 80rem;
+    gap: 2rem;
 }
-.nav-header .authentication i{
+.nav-header .icons-content .authentication i{
     font-size: 2rem;
+    
 }
-.nav-header .authentication .arrow {
+.nav-header .icons-content .authentication .arrow {
     font-size: 1rem;
     color: whitesmoke;
     position: absolute;
-    right: 9px;
+    right: 0px;
     top: 2rem;
-    display: none;
-}
-.nav-header .authentication:hover .arrow{
-    display: block
-}
-.nav-header .authentication .auth{
-    display: none;
-    position: absolute;
-    right: 0;
-    background-color: #222;
-}
-.nav-header .authentication:hover .auth{
+    left: 10px;
     display: block;
 }
-.nav-header .authentication .auth a{
+.nav-header .icons-content .authentication:hover .arrow{
+    display: block
+}
+.nav-header .icons-content .authentication .auth{
+    display: none;
+    position: absolute;
+    right: 55px;
+    margin-top: 15px;
+    background-color: #222;
+}
+.nav-header .icons-content .authentication:hover .auth{
+    display: block;
+}
+.nav-header .icons-content .authentication .auth a{
     display: block;
     padding: 5px;
     color: #fff;
     font-size: 12px;
 }
-.nav-header .cart-icon{
+/* .nav-header .cart-icon{
     position: absolute;
     top: 2rem;
     left: 83rem;
-}
-.nav-header .cart-icon i{
+} */
+.nav-header .icons-content .cart-icon i{
     font-size: 2rem;
     color: black;
 }
 
-.nav-header .cart-icon span{
+.nav-header .icons-content .cart-icon span{
     position: absolute;
-    bottom: 1.3rem;
-    left: 1rem;
+    bottom: 4.5rem;
+    left: 5rem;
     color:white;
 }
 .nav-header .menu-icon{
@@ -339,6 +575,10 @@ li{
 .home .home-content .home-text{
     margin-top: 10rem;
     margin-left: 10rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
 }
 .home .home-content .home-text h1{
     font-size: 3rem;
@@ -371,7 +611,7 @@ li{
 } 
 .home .home-content .image-slider .slide img{
     z-index: 1;
-    width: 1583px;
+    width: 1580px;
     height: 500px;
     border-radius: 5px;
     box-shadow: var(--light-shadow);
@@ -448,7 +688,7 @@ li{
 }
 .about .about-container .about-content img{
     
-    width: 1583px;
+    width: 1580px;
     object-fit: cover;
     height: 500px;
 }
@@ -464,20 +704,19 @@ li{
     max-width: 100%;
     display: flex;
     flex-wrap: nowrap;
+    gap: 5rem;
+    margin-left: 2rem;
 }
 .about .about-container .about-info .about-detail{
     background-color: rgb(251, 252, 251);
-    margin: 5rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding: 2rem;
     margin-top: 35rem;
 }
 .about .about-container .about-info .about-history{
-    margin: 5rem;
+    
     margin-top: 35rem;
     background-color: white;
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding: 2rem;
 }
 .about .about-container .about-info .about-history .Our-history{
     top: 0px;
@@ -620,7 +859,7 @@ li{
 }
 .contact .about-content img{
     
-    width: 1583px;
+    width: 1580px;
     object-fit: cover;
     height: 500px;
 }
@@ -638,7 +877,13 @@ li{
     
 }
 .contact .contact-info .contact-form .socialIcon{
-    margin-top: 35rem;
+    margin-top: 38rem;
+}
+.contact .contact-info .contact-form  .contact-header{
+    margin-bottom: 5rem;
+}
+.contact .contact-info .contact-form  .contact-header h2{
+    margin-top: 3rem;
 }
 .contact .contact-info .contact-form .socialIcon i{
     font-size: 3rem;
@@ -704,7 +949,7 @@ li{
     overflow-x: hidden;
 }
 .shop .about-content img{
-    width: 1583px;
+    width: 1580px;
     object-fit: cover;
     height: 500px;
     z-index: 1;
@@ -731,8 +976,6 @@ li{
     margin: 5rem;
     margin-top: 35rem;
     position: absolute;
-    gap: 5rem;
-    
 }
 .shop .shop-container .shop-type{
     background-color: white;
@@ -778,11 +1021,13 @@ li{
     left: 25rem;
     position: absolute;
     top: 35rem;
+    
 }
 .shop .shop-container-item .shop-item{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 1rem;
 
 }
 .shop .shop-container-item .shop-content{
@@ -820,7 +1065,8 @@ li{
 .shop .shop-container-item .shop-item .shop-content .price{
     color: var(--main--color);
     position: absolute;
-    top: 14rem;
+    top: 17rem;
+    
 }
 /* .shop .shop-container-item .shop-item a{
     position: absolute;
@@ -889,8 +1135,8 @@ li{
 
 .shop .shop-content .sale{
     height: 25px;
-    width: 50px;
-    padding-left: 25px;
+    width: 60px;
+    padding-left: 15px;
     padding-top: 5px;
     background-color: var(--main--color);
     color: white;
@@ -1082,6 +1328,7 @@ li{
     flex-wrap: wrap;
     box-shadow: var(--dark-shadow);
     border-radius: 2rem;
+    height: 220px;
     
 }
 .cart-container .cart-content .cart-item img{
@@ -1223,21 +1470,101 @@ li{
     position: absolute;
     top: 10rem;
 }
-
-@media (max-width:1081px) {
-    .nav-header .links{
-        position: absolute;
-        left: -7rem;
-        
+@media (max-width:1571px){
+    .nav-header{
+        width: 1552px;
+    }
+    .home .home-content .image-slider .slide img{
+        width: 1552px;
+    }
+    .about .about-container .about-content img{
+        width: 1552px;
+    }
+    .contact .about-content img{
+        width: 1552px;
+        height: 300px;
     }
     .shop .about-content img{
-        width:1050px;
+        width: 1552px;
+        height: 300px;
     }
-    .nav-header .authentication {
-        left: 60rem;
+}
+@media (max-width:1290px){
+    .nav-header{
+        width: 1280px;
     }
-    .nav-header .cart-icon{
-        left: 65rem;
+    .home .home-content .image-slider .slide img{
+        width: 1550px;
+    }
+    .nav-header .links{
+        margin-left: 10rem;
+    }
+    .nav-header .icons-content{
+        position: absolute;
+        left: 50rem;
+    }
+    .about .about-container .about-content img{
+        width: 1280px;
+        height: 300px;
+    }
+    .contact .about-content img{
+        width: 1280px;
+        height: 300px;
+    }
+    .contact .contact-map{
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-top: 4rem;
+    }
+    .contact .contact-map img{
+        width: 600px;
+        height: 600px;
+    }
+    .shop .about-content img{
+        width: 1280px;
+        height: 300px;
+    }
+    .shop .about-content h1{
+        top: 8rem;
+        right: 40rem;
+    }
+    .shop .about-content h2{
+        top: 6rem;
+        right: 34rem;
+    }
+    .shop .shop-container{
+        margin-top: 25rem;
+    }
+    .shop .shop-container-item{
+        margin-top: -10rem;
+        gap: -1rem;
+    }
+    .shop .shop-container-item .shop-item{
+        gap: -1rem;
+    }
+}
+@media (max-width:1115px) {
+    .nav-header {
+        width: 1114px;
+    }
+    .home .home-content .image-slider .slide img{
+        width: 1114px;
+    }
+    .contact .about-content img{
+        width: 1114px;
+    }
+    .nav-header .nav-logo .logo{
+        padding: 5px;
+    }
+    .shop .about-content img{
+        width: 1114px;
+    }
+    .shop .about-content img{
+        width: 1114px;
+        position: absolute;
+    }
+    .about .about-container .about-content img{
+        width: 1114px;
     }
     .shop .shop-container{
         display: flex;
@@ -1249,18 +1576,27 @@ li{
     }
     .about .about-container .about-info{
         display: flex;
-        flex-direction: column;
-        margin-top: 2rem;
-        gap: 1rem;
+        flex-direction: row;
+        margin: 0;
+        
+        gap: 5px;
+        position: relative;
     }
     .about .about-container .about-info .about-detail{
         margin: 0;
-        margin-left: 5rem;
+        margin-top: 20rem;
+        margin-left: 2rem;
     }
     .about .about-container .about-info .about-history{
         margin: 0;
-        margin-left: 5rem;
-        margin-top: 35rem;
+        margin-top: 20rem;
+        margin-left: 2rem;
+    }
+    .about .about-container .container{
+        position: relative;
+        left: 0;
+        right: 0;
+        margin-left: -2rem;
     }
     .shop .shop-container .shop-type{
         height: 50px;
