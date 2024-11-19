@@ -246,58 +246,6 @@ body{
     background: transparent;
     border: 2px solid #fff;
 }
-@media screen and (max-width: 768px) {
-    .form-cont .contain{
-        height: calc(100vh - 20px);
-    }
-    .form-cont .contain .form-box{
-        width: 100%;
-        height: 70%;
-        bottom: 0;
-    }
-    .contain.active .form-box{
-        right: 0;
-        bottom: 30%;
-    }
-    .form-cont .contain.active .toggle-box::before{
-        left: 0;
-        top: 70%;
-    }
-    .form-cont .toggle-box::before{
-        width: 100%;
-        height: 300%;
-        left: 0;
-        top: -270%;
-        border-radius: 20vw;
-    }
-    .form-cont .toggle-box .toggle-panel{
-        width: 100%;
-        height: 30%;
-    }
-    .form-cont .contain.active .toggle-panel.toggle-left{
-        left: 0;
-        top: -30%;
-    }
-    .form-cont .toggle-panel.toggle-left{
-        top: 0;
-    }
-    .form-cont .toggle-panel.toggle-right{
-        right: 0;
-        bottom: -30%;
-    }
-    .form-cont .contain.active .toggle-panel.toggle-right{
-        bottom: 0;
-    }
-}
-@media screen and (max-width: 400px){
-    .form-cont .contain .form-box{
-        padding: 20px;
-    }
-    .form-cont .contain .toggle-box .toggle-panel h1{
-        font-size: 30px;
-    }
-}
-
 /* .container{
     position: relative;
     width: 100%;
@@ -1470,31 +1418,13 @@ li{
     position: absolute;
     top: 10rem;
 }
-@media (max-width:1571px){
-    .nav-header{
-        width: 1552px;
-    }
-    .home .home-content .image-slider .slide img{
-        width: 1552px;
-    }
-    .about .about-container .about-content img{
-        width: 1552px;
-    }
-    .contact .about-content img{
-        width: 1552px;
-        height: 300px;
-    }
-    .shop .about-content img{
-        width: 1552px;
-        height: 300px;
-    }
-}
+
 @media (max-width:1290px){
     .nav-header{
-        width: 1280px;
+        width: 1290px;
     }
     .home .home-content .image-slider .slide img{
-        width: 1550px;
+        width: 1290;
     }
     .nav-header .links{
         margin-left: 10rem;
@@ -1504,11 +1434,11 @@ li{
         left: 50rem;
     }
     .about .about-container .about-content img{
-        width: 1280px;
+        width: 1290;
         height: 300px;
     }
     .contact .about-content img{
-        width: 1280px;
+        width: 1290;
         height: 300px;
     }
     .contact .contact-map{
@@ -1521,7 +1451,7 @@ li{
         height: 600px;
     }
     .shop .about-content img{
-        width: 1280px;
+        width: 1290;
         height: 300px;
     }
     .shop .about-content h1{
@@ -1545,26 +1475,34 @@ li{
 }
 @media (max-width:1115px) {
     .nav-header {
-        width: 1114px;
+        width: 1120px;
     }
     .home .home-content .image-slider .slide img{
-        width: 1114px;
+        width: 1120px;
+    }
+    .home .home-content .image-slider{
+        width: 720px;
     }
     .contact .about-content img{
-        width: 1114px;
+        width: 1120px;
+    }
+    .home .image-slider .slide .slide-info{
+        margin-left: 10rem;
+    }
+    .home .image-slider .navigation{
+        left: 30%;
     }
     .nav-header .nav-logo .logo{
         padding: 5px;
     }
     .shop .about-content img{
-        width: 1114px;
+        width: 1120px;
     }
     .shop .about-content img{
-        width: 1114px;
-        position: absolute;
+        width: 1120px;
     }
     .about .about-container .about-content img{
-        width: 1114px;
+        width: 1120px;
     }
     .shop .shop-container{
         display: flex;
@@ -1578,7 +1516,6 @@ li{
         display: flex;
         flex-direction: row;
         margin: 0;
-        
         gap: 5px;
         position: relative;
     }
@@ -1769,5 +1706,84 @@ li{
     }
     .home .image-slider .navigation{
         bottom: 10px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .form-cont .contain{
+        height: calc(100vh - 20px);
+    }
+    .form-cont .contain .form-box{
+        width: 100%;
+        height: 70%;
+        bottom: 0;
+    }
+    .contain.active .form-box{
+        right: 0;
+        bottom: 30%;
+    }
+    .form-cont .contain.active .toggle-box::before{
+        left: 0;
+        top: 70%;
+    }
+    .form-cont .toggle-box::before{
+        width: 100%;
+        height: 300%;
+        left: 0;
+        top: -270%;
+        border-radius: 20vw;
+    }
+    .form-cont .toggle-box .toggle-panel{
+        width: 100%;
+        height: 30%;
+    }
+    .form-cont .contain.active .toggle-panel.toggle-left{
+        left: 0;
+        top: -30%;
+    }
+    .form-cont .toggle-panel.toggle-left{
+        top: 0;
+    }
+    .form-cont .toggle-panel.toggle-right{
+        right: 0;
+        bottom: -30%;
+    }
+    .form-cont .contain.active .toggle-panel.toggle-right{
+        bottom: 0;
+    }
+    .nav-header{
+        width: 800px;
+    }
+    .nav-header .links{
+        visibility: hidden;
+
+    }
+    .home .home-content .image-slider .slide img{
+        width: 800px;
+        height: 300px;
+    }
+    .home .home-content .image-slider{
+        width: 320px;
+    }
+    .home .image-slider .slide .slide-info{
+        margin-left: 15rem;
+        margin-top: 2.5rem;
+    }
+    .home .image-slider .navigation{
+        left: 80%;
+        top: 270px;
+    }
+    .nav-header .icons-content{
+        left: 25rem;
+    }
+    .shop .about-content img{
+        width: 800px;
+    }
+}
+@media screen and (max-width: 400px){
+    .form-cont .contain .form-box{
+        padding: 20px;
+    }
+    .form-cont .contain .toggle-box .toggle-panel h1{
+        font-size: 30px;
     }
 }
