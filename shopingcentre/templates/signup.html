@@ -1,63 +1,59 @@
-{% extends "base.html" %}
-{% load static %}
-{% block title %}
-<title> Sign-Up</title>
-{% endblock title %}
-
-{% block content %}
+{% extends "base.html" %} {% load static %} {% block title %}
+<title>Sign-Up</title>
+{% endblock title %} {% block content %}
 <div class="form-cont">
-    <div class="contain">
-
-        <div class="form-box login">
-            <form action="" method="POST">
-                {% csrf_token %}
-                <h1>Registration</h1>
-                <div class="input-box">
-                    {{form.username}}
-                    <i class='bx bxs-user'></i>
-                </div>
-                <div class="input-box">
-                    {{form.first_name}}
-                    <i class='bx bxs-user'></i>
-                </div>
-                <div class="input-box">
-                    {{form.last_name}}
-                    <i class='bx bxs-user'></i>
-                </div>
-                <div class="input-box">
-                    {{form.email}}
-                    <i class='bx bx-envelope' ></i>
-                </div>
-                <div class="input-box">
-                    {{form.password1}}
-                    <i class='bx bxs-lock-alt' ></i>
-                </div>
-                <div class="input-box">
-                    {{form.password2}}
-                    <i class='bx bxs-lock-alt' ></i>
-                </div>
-                <!-- <div class="forgot-password">
+  <div class="contain">
+    <div class="form-box login">
+      <form action="" method="POST">
+        {% csrf_token %}
+        <h1>Registration</h1>
+        <div class="input-box">
+          {{form.username}}
+          <i class="bx bxs-user"></i>
+        </div>
+        <div class="input-box">
+          {{form.first_name}}
+          <i class="bx bxs-user"></i>
+        </div>
+        <div class="input-box">
+          {{form.last_name}}
+          <i class="bx bxs-user"></i>
+        </div>
+        <div class="input-box">
+          {{form.email}}
+          <i class="bx bx-envelope"></i>
+        </div>
+        <div class="input-box">
+          {{form.password1}}
+          <i class="bx bxs-lock-alt"></i>
+        </div>
+        <div class="input-box">
+          {{form.password2}}
+          <i class="bx bxs-lock-alt"></i>
+        </div>
+        <!-- <div class="forgot-password">
                     <a href="#">Forgot Password?</a>
                 </div> -->
-                <button type="submit" class="btn">Sign-Up</button>
-                <p>or signup with social account</p>
-                <div class="social-icons">
-                    <a href=""><i class='bx bxl-google' ></i></a>
-                    <a href=""><i class='bx bxl-facebook' ></i></a>
-                    <a href=""><i class='bx bxl-twitter' ></i></a>
-                </div>
-            </form>
+        <button type="submit" class="btn">Sign-Up</button>
+        <p>or signup with social account</p>
+        <div class="social-icons">
+          <a href=""><i class="bx bxl-google"></i></a>
+          <a href=""><i class="bx bxl-facebook"></i></a>
+          <a href=""><i class="bx bxl-twitter"></i></a>
         </div>
-
-        <div class="toggle-box">
-            <div class="toggle-panel toggle-left">
-                <h1>Welcome Back!</h1>
-                <p>Already have an account ?</p>
-                <a href="{% url 'shopingcentre:login' %}"><button class="btn register-btn">Login</button></a>
-            </div>
-            
-        </div>
+      </form>
     </div>
+
+    <div class="toggle-box">
+      <div class="toggle-panel toggle-left">
+        <h1>Welcome Back!</h1>
+        <p>Already have an account ?</p>
+        <a href="{% url 'shopingcentre:login' %}"
+          ><button class="btn register-btn">Login</button></a
+        >
+      </div>
+    </div>
+  </div>
 </div>
 <script src="{% static 'js/app.js' %}"></script>
 {% endblock content %}

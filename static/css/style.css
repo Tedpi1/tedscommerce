@@ -518,7 +518,7 @@ li{
     position: absolute;
     display: flex;
     flex-direction: column;
-    z-index: 1;
+    
 }
 .home .home-content .home-text{
     margin-top: 10rem;
@@ -1431,7 +1431,7 @@ li{
     }
     .nav-header .icons-content{
         position: absolute;
-        left: 50rem;
+        left:60rem;
     }
     .about .about-container .about-content img{
         width: 1290;
@@ -1472,6 +1472,7 @@ li{
     .shop .shop-container-item .shop-item{
         gap: -1rem;
     }
+    
 }
 @media (max-width:1115px) {
     .nav-header {
@@ -1609,6 +1610,75 @@ li{
     .shop .shop-container-item .shop-item{
         margin-left: 5rem;
     }
+    .shop-container-item {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: flex-start;
+        padding: 20px;
+      }
+      
+      /* Style each product card */
+      .shop-content {
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        padding: 15px;
+        box-sizing: border-box;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        position: relative;
+        width: 100%; /* Default for mobile */
+      }
+      
+      /* Layout: 2 cards on tablets, 3 on desktops */
+      @media (min-width: 768px) {
+        .shop-content {
+          width: calc(50% - 20px);
+        }
+      }
+      
+      @media (min-width: 1024px) {
+        .shop-content {
+          width: calc(33.333% - 20px);
+        }
+      }
+      
+      .sale {
+        color: white;
+        background-color: red;
+        padding: 4px 8px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 14px;
+        border-radius: 4px;
+      }
+      
+      .shop-content img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+      
+      .view {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+      }
+      
+      .cartLink a, .viewLink a {
+        padding: 8px 12px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 14px;
+      }
+      
+      .cartLink a:hover, .viewLink a:hover {
+        background-color: #0056b3;
+      }
+      
 }
 
 @media (max-width:700px){
@@ -1787,3 +1857,4 @@ li{
         font-size: 30px;
     }
 }
+    
